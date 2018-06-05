@@ -456,18 +456,29 @@ XML对象，和JSON对象一样可以用于前后端数据传输，但是不推�
 echo "# flask-rest" >> README.md
 git init
 git add README.md
+
+
+3. 再本地仓库进行添加文件
+git add * 添加所有文件  或者 git add .
+config -l 查看git配置信息
+git status 查看未跟踪的文件
+.idea/ 文件千万不能上传上去  （包含了当前开发工具中相关的环境配置，不需要提交）
+
+
+4. 提交并推送到 github远程仓库中
 git commit -m "first commit"
+
+# 第一次上传，因为远程仓库不存在master主分支，所以我们要使用
+git push --set-upstream origin master 来设置master主分支
+
+
+# 以后再次上传时， 就不再使用--set-upstream命令
 git remote add origin https://github.com/RiverStormWinds/flask-rest.git
 git push -u origin master
 
-config -l 查看git配置信息
 
-git status 查看未跟踪的文件
-
-.idea/ 文件千万不能上传上去
-
-
-
+5. 在开始跟踪文件后 -- 绿色
+可以进行撤销跟踪： git reset HEAD <文件名或目录名>
 
 
 
